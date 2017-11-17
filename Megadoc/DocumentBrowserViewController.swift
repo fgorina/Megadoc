@@ -32,15 +32,57 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: UIDocumentBrowserViewControllerDelegate
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler importHandler: @escaping (URL?, UIDocumentBrowserViewController.ImportMode) -> Void) {
-        let newDocumentURL: URL? = nil
+        
+        //Get the documents directory
+        
+        let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+        
+        var i = 0
+        var name = "Untitled \(i)"
+        
+        var aDocumentURL : URL?
+        var path = ""
+        repeat{
+            i = i + 1
+            name = "Untitled \(i)"
+            aDocumentURL = docDir.appendingPathComponent(name).appendingPathExtension("md")
+            path = aDocumentURL!.path
+           
+         } while FileManager.default.fileExists(atPath: path)
+        
+        
+        if let newDocumentURL = aDocumentURL{
+            let doc = Document(fileURL: newDocumentURL)
+            doc.save(to: newDocumentURL, for: .forCreating) { (saveSuccess) in
+                
+                // Make sure the document saved successfully
+                guard saveSuccess else {
+                    // Cancel document creation
+                    importHandler(nil, .none)
+                    return
+                }
+                
+                // Close the document.
+                doc.close(completionHandler: { (closeSuccess) in
+                    
+                    // Make sure the document closed successfully
+                    guard closeSuccess else {
+                        // Cancel document creation
+                        importHandler(nil, .none)
+                        return
+                    }
+                    
+                    // Pass the document's temporary URL to the import handler.
+                    importHandler(newDocumentURL, .move)
+                })
+            }
+        }else {
+            importHandler(nil, .none)
+        }
+        
         
         // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
         // Make sure the importHandler is always called, even if the user cancels the creation request.
-        if newDocumentURL != nil {
-            importHandler(newDocumentURL, .move)
-        } else {
-            importHandler(nil, .none)
-        }
     }
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didPickDocumentURLs documentURLs: [URL]) {
