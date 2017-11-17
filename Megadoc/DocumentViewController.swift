@@ -61,7 +61,6 @@ class DocumentViewController: UIViewController {
         fTextArea.resignFirstResponder()
     }
     
-    
     @IBAction func render(){
         
         if let dw = webView{
