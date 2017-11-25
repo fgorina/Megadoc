@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		003A14131FC3439300C7C98E /* PassphraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseViewController.swift; sourceTree = "<group>"; };
 		0058DFB21FC419E6007CB316 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
+		0074A02D1FC9DB3E00E83EBA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		009EF03F1FBAF18300CFA52C /* Megadoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Megadoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009EF0421FBAF18300CFA52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009EF0441FBAF18300CFA52C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0074A02E1FC9E3F800E83EBA /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
 		009EF0361FBAF18300CFA52C = {
 			isa = PBXGroup;
 			children = (
+				0074A02E1FC9E3F800E83EBA /* Documentation */,
 				00EFD71B1FBAF9E4005E9F69 /* Resources */,
 				009EF0411FBAF18300CFA52C /* Megadoc */,
 				009EF0401FBAF18300CFA52C /* Products */,
@@ -97,6 +106,7 @@
 				009EF04D1FBAF18300CFA52C /* Assets.xcassets */,
 				009EF04F1FBAF18300CFA52C /* LaunchScreen.storyboard */,
 				009EF0521FBAF18300CFA52C /* Info.plist */,
+				0074A02D1FC9DB3E00E83EBA /* README.md */,
 			);
 			path = Megadoc;
 			sourceTree = "<group>";
