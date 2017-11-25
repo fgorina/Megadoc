@@ -12,12 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var settings : [String:Double] = ["identifyTimeout":300.0, "lockTimeout": 30.0, "panicEnabled": 1.0]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Check if threre are settings
         return true
-    }
+      }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -54,13 +55,78 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Failed to reveal the document at URL \(inputURL) with error: '\(error)'")
                 return
             }
+            //documentBrowserViewController.presentDocument(at: revealedDocumentURL!)
             
+            documentBrowserViewController.openDocument(at: revealedDocumentURL!)
+             
             // Present the Document View Controller for the revealed URL
-            documentBrowserViewController.presentDocument(at: revealedDocumentURL!)
         }
 
         return true
     }
+    
+    //MARK: Utilities
+    
+    static func applicationDocumentsDirectory() -> URL{
+        
+        let fm = FileManager.default
+        var docs = fm.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last! as URL
+ 
+        var isDir : ObjCBool = ObjCBool(false)
+        do{
+            if !fm.fileExists(atPath: docs.path, isDirectory: &isDir){
+                try fm.createDirectory(at: docs, withIntermediateDirectories: true, attributes: [:])
+            }else if !isDir.boolValue{
+                try fm.removeItem(at: docs)
+                try fm.createDirectory(at: docs, withIntermediateDirectories: true, attributes: [:])
+            }else{
+                var rsrcs = URLResourceValues()
+                rsrcs.isHidden = false
+                rsrcs.isExcludedFromBackup = false
+                try docs.setResourceValues(rsrcs)
+
+            }
+        }catch{
+            NSLog(error.localizedDescription)
+        }
+
+        return docs
+    }
+
+    static func applicationSupportDirectory() -> URL{
+        
+        let fm = FileManager.default
+        let support = fm.urls(for: FileManager.SearchPathDirectory.applicationSupportDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last! as URL
+        
+        var isDir : ObjCBool = ObjCBool(false)
+        do{
+            if !fm.fileExists(atPath: support.path, isDirectory: &isDir){
+                try fm.createDirectory(at: support, withIntermediateDirectories: true, attributes: [:])
+            }else if !isDir.boolValue{
+                try fm.removeItem(at: support)
+                try fm.createDirectory(at: support, withIntermediateDirectories: true, attributes: [:])
+            }
+        }catch{
+            NSLog(error.localizedDescription)
+        }
+        
+        return support
+    }
+
+    
+    static func showErrorMessage(_ text : String){
+        
+        NSLog("Error %@", text)
+        
+        return
+        
+        let alertController = UIAlertController(title: "Error", message: text, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+        }
+        alertController.addAction(defaultAction)
+        UIApplication.shared.keyWindow!.rootViewController!.present(alertController, animated: true, completion: nil)
+    }
+
 
 
 }

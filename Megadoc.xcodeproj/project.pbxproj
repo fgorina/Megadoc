@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003A14141FC3439300C7C98E /* PassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003A14131FC3439300C7C98E /* PassphraseViewController.swift */; };
+		0058DFB31FC419E6007CB316 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058DFB21FC419E6007CB316 /* CryptoManager.swift */; };
 		009EF0431FBAF18300CFA52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009EF0421FBAF18300CFA52C /* AppDelegate.swift */; };
 		009EF0451FBAF18300CFA52C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009EF0441FBAF18300CFA52C /* DocumentBrowserViewController.swift */; };
 		009EF0471FBAF18300CFA52C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009EF0461FBAF18300CFA52C /* DocumentViewController.swift */; };
@@ -14,10 +16,19 @@
 		009EF04C1FBAF18300CFA52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009EF04A1FBAF18300CFA52C /* Main.storyboard */; };
 		009EF04E1FBAF18300CFA52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009EF04D1FBAF18300CFA52C /* Assets.xcassets */; };
 		009EF0511FBAF18300CFA52C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009EF04F1FBAF18300CFA52C /* LaunchScreen.storyboard */; };
+		00EFE0421FC5759A00932291 /* doc_44x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EFE03E1FC5759A00932291 /* doc_44x58.png */; };
+		00EFE0431FC5759A00932291 /* doc_22x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EFE03F1FC5759A00932291 /* doc_22x29.png */; };
+		00EFE0441FC5759A00932291 /* doc_320x320.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EFE0401FC5759A00932291 /* doc_320x320.png */; };
+		00EFE0451FC5759A00932291 /* doc_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EFE0411FC5759A00932291 /* doc_64x64.png */; };
+		00EFE0471FC590E000932291 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EFE0461FC590E000932291 /* ChangePasswordViewController.swift */; };
+		00EFE04A1FC8359B00932291 /* LockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EFE0491FC8359B00932291 /* LockController.swift */; };
+		00EFE04C1FC8494600932291 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EFE04B1FC8494600932291 /* SettingsViewController.swift */; };
 		ACD8441AE4E1FD8DB8D0E81C /* Pods_Megadoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172CA9A1006680348592951A /* Pods_Megadoc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003A14131FC3439300C7C98E /* PassphraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseViewController.swift; sourceTree = "<group>"; };
+		0058DFB21FC419E6007CB316 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
 		009EF03F1FBAF18300CFA52C /* Megadoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Megadoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009EF0421FBAF18300CFA52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009EF0441FBAF18300CFA52C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +38,13 @@
 		009EF04D1FBAF18300CFA52C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		009EF0501FBAF18300CFA52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009EF0521FBAF18300CFA52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00EFE03E1FC5759A00932291 /* doc_44x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doc_44x58.png; sourceTree = "<group>"; };
+		00EFE03F1FC5759A00932291 /* doc_22x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doc_22x29.png; sourceTree = "<group>"; };
+		00EFE0401FC5759A00932291 /* doc_320x320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doc_320x320.png; sourceTree = "<group>"; };
+		00EFE0411FC5759A00932291 /* doc_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doc_64x64.png; sourceTree = "<group>"; };
+		00EFE0461FC590E000932291 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		00EFE0491FC8359B00932291 /* LockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockController.swift; sourceTree = "<group>"; };
+		00EFE04B1FC8494600932291 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		172CA9A1006680348592951A /* Pods_Megadoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Megadoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B7661A0D69FB7DEBB0170 /* Pods-Megadoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Megadoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Megadoc/Pods-Megadoc.release.xcconfig"; sourceTree = "<group>"; };
 		DFCFEAAE0C923F1D426EC33C /* Pods-Megadoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Megadoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Megadoc/Pods-Megadoc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,10 +84,15 @@
 		009EF0411FBAF18300CFA52C /* Megadoc */ = {
 			isa = PBXGroup;
 			children = (
+				0058DFB21FC419E6007CB316 /* CryptoManager.swift */,
+				009EF0481FBAF18300CFA52C /* Document.swift */,
 				009EF0421FBAF18300CFA52C /* AppDelegate.swift */,
 				009EF0441FBAF18300CFA52C /* DocumentBrowserViewController.swift */,
 				009EF0461FBAF18300CFA52C /* DocumentViewController.swift */,
-				009EF0481FBAF18300CFA52C /* Document.swift */,
+				00EFE0491FC8359B00932291 /* LockController.swift */,
+				003A14131FC3439300C7C98E /* PassphraseViewController.swift */,
+				00EFE0461FC590E000932291 /* ChangePasswordViewController.swift */,
+				00EFE04B1FC8494600932291 /* SettingsViewController.swift */,
 				009EF04A1FBAF18300CFA52C /* Main.storyboard */,
 				009EF04D1FBAF18300CFA52C /* Assets.xcassets */,
 				009EF04F1FBAF18300CFA52C /* LaunchScreen.storyboard */,
@@ -81,6 +104,10 @@
 		00EFD71B1FBAF9E4005E9F69 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00EFE03F1FC5759A00932291 /* doc_22x29.png */,
+				00EFE03E1FC5759A00932291 /* doc_44x58.png */,
+				00EFE0411FC5759A00932291 /* doc_64x64.png */,
+				00EFE0401FC5759A00932291 /* doc_320x320.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -165,7 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				009EF0511FBAF18300CFA52C /* LaunchScreen.storyboard in Resources */,
+				00EFE0441FC5759A00932291 /* doc_320x320.png in Resources */,
 				009EF04E1FBAF18300CFA52C /* Assets.xcassets in Resources */,
+				00EFE0451FC5759A00932291 /* doc_64x64.png in Resources */,
+				00EFE0431FC5759A00932291 /* doc_22x29.png in Resources */,
+				00EFE0421FC5759A00932291 /* doc_44x58.png in Resources */,
 				009EF04C1FBAF18300CFA52C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,10 +266,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0058DFB31FC419E6007CB316 /* CryptoManager.swift in Sources */,
 				009EF0491FBAF18300CFA52C /* Document.swift in Sources */,
 				009EF0471FBAF18300CFA52C /* DocumentViewController.swift in Sources */,
+				003A14141FC3439300C7C98E /* PassphraseViewController.swift in Sources */,
+				00EFE04A1FC8359B00932291 /* LockController.swift in Sources */,
 				009EF0451FBAF18300CFA52C /* DocumentBrowserViewController.swift in Sources */,
 				009EF0431FBAF18300CFA52C /* AppDelegate.swift in Sources */,
+				00EFE0471FC590E000932291 /* ChangePasswordViewController.swift in Sources */,
+				00EFE04C1FC8494600932291 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
