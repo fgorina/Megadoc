@@ -73,5 +73,14 @@ El codi font i el programa son de lliure utilització per qualsevol membre o sim
 
 Altres col·lectius haurien de demanar permís a l’autor que decidirà en funció de una funció de aleatòria de prou qualitat.
 
-Gangsters i terroristes abstenirse.
+Gàngsters i terroristes abstenir-se.
+
+## Agraïments
+
+Aquesta aplicació fa servir les següents llibreries. Molt agraït als seus desenvolupadors que han fet una gran feina simplificant aquest tipus d'aplicació. Mireu les seves llicències si son d’aplicació.
+
+- [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) es una llibreria de funcions de encripció. Es fa servir fonamentalment per l’algoritme AES.
+- [SwiftyRSA](https://github.com/TakeScoop/SwiftyRSA) es una llibreria per fer la encripció, desencripció amb l’algoritme RSA de clau pública / privada.
+- [Down](https://github.com/iwasrobbed/Down) es una llibreria que fa una conversió de **markdown** a **html** per visualitzar millor la documentació.
+- [Cocoapods](https://cocoapods.org) es el sistema de integració d’aquestes llibreries a Megadoc.
 
